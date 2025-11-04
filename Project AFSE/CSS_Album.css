@@ -1,0 +1,131 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    
+}
+
+h1, h2 {
+    color: antiquewhite;
+    text-shadow: 5px 5px 5px #000;
+}
+
+h5 {
+    font-weight: bold;
+    text-shadow: 3px 3px 3px #000;
+}
+
+p, .modal-content li {
+    text-shadow: 5px 5px 5px #000;
+}
+
+nav{
+    color: antiquewhite;
+    text-shadow: 1px 1px 4px #000;
+}
+
+#displayComplete {
+    color: antiquewhite;
+    text-shadow: 3px  3px 3px #000;
+}
+.btn-lg{
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    color: antiquewhite;
+}
+
+.scopri-piu{
+    display: none;
+}
+
+.flip-card {
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.7s;
+}
+
+.flip-card-inner.flipped {
+    transform: rotateY(185deg);
+}
+
+.flip-card-front, .flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-front {
+    background-color: rgb(87, 0, 0);
+    overflow: hidden;
+}
+
+.flip-card-front img {
+    width: 97%;
+    height: 97%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.flip-card-back {
+    background-color: #222;
+    box-shadow: 2px 2px 3px 3px rgb(87, 0, 0);
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 14px;
+    padding: 10px;
+}
+
+.modal {
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    border: 5px solid rgb(87, 0, 0);
+    max-width: 50%;
+    border-radius: 15px;
+}
+
+.close-button:hover{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.modal-content ul {
+    padding-left: 50px;
+}
+
+.modal-content ul li {
+    text-align: left;
+}

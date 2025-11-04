@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album</title>
+
+    <link rel="icon" type="image/png" href="Immagini/logo-marvel.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS_Album.css">
+</head>
+
+<body class="bg-dark">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-5">
+                <li class="nav-item">
+                    <a class="fw-bold nav-link" href="HTML_Home.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="fw-bold nav-link" href="HTML_OpenPacks.html">PACCHETTI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="fw-bold nav-link active" href="">ALBUM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="fw-bold nav-link" href="HTML_Scambi.html">SCAMBI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="fw-bold nav-link" href="HTML_Profilo.html">PROFILO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="fw-bold nav-link" href="HTML_UNIMICoin.html">UNIMICoin</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row my-4">
+
+        <div class="col-4"></div>
+
+        <div class="col-4 text-center">
+            <h1 class="fw-bold text-decoration-underline">Album</h1>
+        </div>
+
+        <div class="col-3">
+            <button id="scambi" class="btn btn-lg btn-success border-2 border-light p-3 fw-bold">Proposte di Scambio</button>
+        </div>
+
+    </div>
+
+    <h3 id="displayComplete" class="text-center fw-bold"></h3>
+
+    <div class="d-flex justify-content-center">
+        <button id="createAlbumButton" class="align-items-center btn btn-lg btn-success border-2 border-light p-3 fw-bold" style="display: none">Crea Album di Figurine</button>
+    </div>
+
+    <!-- Album -->
+    <div id="cards-container" style="display: block;">
+
+        <br>
+        
+        <!-- Riga 1 -->
+        <div class="row justify-content-center mt-2 mb-4 mx-4">
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card0">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card1">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card2">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card3">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card4">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riga 2 -->
+        <div class="row justify-content-center mb-4 mx-4">
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card5">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card6">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card7">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card8">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card9">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riga 3 -->
+        <div class="row justify-content-center mb-4 mx-4">
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card10">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card11">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card12">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card13">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card14">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riga 4 -->
+        <div class="row justify-content-center mb-4 mx-4">
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card15">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card16">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card17">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card18">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card19">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riga 5 -->
+        <div class="row justify-content-center mb-4 mx-4">
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card20">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card21">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card22">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card23">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card24">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riga 7 -->
+        <div class="row justify-content-center mb-4 mx-4">
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card25">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card26">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card27">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card28">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card29">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riga 8 -->
+        <div class="row justify-content-center mb-4 mx-4">
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card30">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card31">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card32">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card33">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card34">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riga 9 -->
+        <div class="row justify-content-center mb-4 mx-4">
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card35">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card36">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card37">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card38">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card39">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riga 10 -->
+        <div class="row justify-content-center mb-4 mx-4">
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card40">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card41">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card42">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card43">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card44">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riga 11 -->
+        <div class="row justify-content-center mb-4 mx-4">
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card45">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card46">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card47">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card48">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card49">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riga 12 -->
+        <div class="row justify-content-center mb-4 mx-4">
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card50">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card51">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card52">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card53">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card54">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riga 13 -->
+        <div class="row justify-content-center mb-4 mx-4">
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card55">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card56">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card57">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card58">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card59">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riga 14 -->
+        <div class="row justify-content-center mb-4 mx-4">
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card60">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card61">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card62">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card63">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-2 flip-card">
+                <div class="flip-card-inner" id="card64">
+                    <div class="flip-card-front">
+                        <img src="Immagini/incognito.jpg" class="card-img">
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-between p-3">
+                        <h5 class="card-title text-danger">???</h5>
+                        <p class="card-text">Non hai ancora trovato questa carta.</p>
+                        <button class="btn btn-danger scopri-piu" onclick="test()">Scopri di più</button>
+                        <p class="card-text mt-3 fw-bold text-light" id="copie"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="JS_Album.js"></script>
+
+</body>
+</html>

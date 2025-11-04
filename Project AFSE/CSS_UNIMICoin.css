@@ -1,0 +1,29 @@
+body {
+    user-select: none;
+    background-image: url("/Immagini/sfondo1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+h1, h2{
+    color: antiquewhite;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px #000;
+}
+
+nav{
+    color: antiquewhite;
+    text-shadow: 1px 1px 4px #000;
+}
+
+
+#umi-coin{
+    width: 4%;
+    height: 4%;
+}
+
+#counter-umi-coin{
+    width: 18%;
+}

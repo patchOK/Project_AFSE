@@ -1,0 +1,115 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    user-select: none;
+
+    background-image: url("/Immagini/sfondo1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    user-select: none;
+}
+
+h1, h2 {
+    color: antiquewhite;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px #000;
+}
+
+h3, h5 {
+    color: antiquewhite;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px #000;
+}
+
+p {
+    color: antiquewhite;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #000;
+}
+
+nav{
+    color: antiquewhite;
+    text-shadow: 1px 1px 4px #000;
+}
+
+#pack-img {
+    cursor: pointer;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+#umi-coin{
+    width: 4%;
+    height: 4%;
+}
+
+#counter-umi-coin{
+    width: 18%;
+}
+
+#cards-container {
+    overflow: hidden;
+}
+
+.flip-card {
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.7s;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(185deg);
+}
+
+.flip-card-front, .flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-front {
+    background-color: antiquewhite;
+    overflow: hidden;
+}
+
+.flip-card-front img {
+    width: 97%;
+    height: 97%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.flip-card-back {
+    background-color: #222;
+    box-shadow: 2px 2px 3px 3px antiquewhite;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 14px;
+    padding: 10px;
+}
